@@ -2,7 +2,7 @@
 //  GalleryGridView.swift
 //  GalleryApp
 //
-//  Created by Rahul Kiumar on 02/05/26.
+//  Created by Swosti Sambit Yadab on 02/05/26.
 //
 
 import SwiftUI
@@ -101,30 +101,4 @@ struct GalleryView: View {
 
 #Preview {
     GalleryView()
-}
-
-struct GalleryDetailView: View {
-    
-    let item: Gallery
-    var animation: Namespace.ID
-    
-    var body: some View {
-        let url = ImageCacheManager.shared
-            .fileURL(for: item.fullImageFileName)
-        
-        ZStack {
-            Color.black.ignoresSafeArea()
-            
-            if let image = UIImage(contentsOfFile: url.path) {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-            } else {
-                ProgressView()
-                    .tint(.white)
-            }
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationTransition(.zoom(sourceID: item.id, in: animation))
-    }
 }

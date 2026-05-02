@@ -2,7 +2,7 @@
 //  NetworkError.swift
 //  GalleryApp
 //
-//  Created by Rahul Kiumar on 02/05/26.
+//  Created by Swosti Sambit Yadab on 02/05/26.
 //
 
 import Foundation

@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4995F9EC2FA6A7F900C0FDD9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 4995F9EB2FA6A7F900C0FDD9 /* GoogleSignIn */; };
+		4995F9EE2FA6A7F900C0FDD9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4995F9ED2FA6A7F900C0FDD9 /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		497A3BFB2FA5EC69002C65F2 /* GalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4920F4852FA6A9C80082D915 /* Exceptions for "GalleryApp" folder in "GalleryApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 497A3BFA2FA5EC69002C65F2 /* GalleryApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		497A3BFD2FA5EC69002C65F2 /* GalleryApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4920F4852FA6A9C80082D915 /* Exceptions for "GalleryApp" folder in "GalleryApp" target */,
+			);
 			path = GalleryApp;
 			sourceTree = "<group>";
 		};
@@ -23,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4995F9EC2FA6A7F900C0FDD9 /* GoogleSignIn in Frameworks */,
+				4995F9EE2FA6A7F900C0FDD9 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +85,8 @@
 			);
 			name = GalleryApp;
 			packageProductDependencies = (
+				4995F9EB2FA6A7F900C0FDD9 /* GoogleSignIn */,
+				4995F9ED2FA6A7F900C0FDD9 /* GoogleSignInSwift */,
 			);
 			productName = GalleryApp;
 			productReference = 497A3BFB2FA5EC69002C65F2 /* GalleryApp.app */;
@@ -94,6 +116,9 @@
 			);
 			mainGroup = 497A3BF22FA5EC69002C65F2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4995F9EA2FA6A7F900C0FDD9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 497A3BFC2FA5EC69002C65F2 /* Products */;
 			projectDirPath = "";
@@ -253,6 +278,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GalleryApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +310,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GalleryApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -328,6 +355,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4995F9EA2FA6A7F900C0FDD9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4995F9EB2FA6A7F900C0FDD9 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4995F9EA2FA6A7F900C0FDD9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		4995F9ED2FA6A7F900C0FDD9 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4995F9EA2FA6A7F900C0FDD9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 497A3BF32FA5EC69002C65F2 /* Project object */;
 }

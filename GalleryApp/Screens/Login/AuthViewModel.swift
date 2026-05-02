@@ -2,7 +2,7 @@
 //  AuthViewModel.swift
 //  GalleryApp
 //
-//  Created by Rahul Kiumar on 02/05/26.
+//  Created by Swosti Sambit Yadab on 02/05/26.
 //
 
 import Foundation
@@ -14,8 +14,6 @@ import SwiftData
 final class AuthViewModel: ObservableObject {
     
     @Published var isLoggedIn = false
-    @Published var name: String = ""
-    @Published var email: String = ""
     
     func signIn() async {
         
@@ -27,7 +25,7 @@ final class AuthViewModel: ObservableObject {
         do {
             let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootVC)
             guard let user = result.user.profile else { return }
-            print("LOGGED USER INFO: \nName: \(user.name)\nEMAIL: \(user.email)")
+            print("Logged User Info: \nName: \(user.name)\nEmail: \(user.email)")
             isLoggedIn = true
         } catch {
             print("Error in Google Sign In: ", error.localizedDescription)
@@ -44,7 +42,7 @@ final class AuthViewModel: ObservableObject {
         do {
             let user = try await GIDSignIn.sharedInstance.restorePreviousSignIn()
             guard let profile = user.profile else { return }
-            print("RESTORED LOGGED USER INFO: \nName: \(profile.name)\nEMAIL: \(profile.email)")
+            print("Restored Logged User Info: \nName: \(profile.name)\nEmail: \(profile.email)")
             isLoggedIn = true
         } catch {
             print("Error restoring User: ", error.localizedDescription)
